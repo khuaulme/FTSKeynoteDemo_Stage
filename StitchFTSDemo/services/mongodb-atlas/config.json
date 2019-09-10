@@ -1,0 +1,11 @@
+{
+    "id": "5d40b185250aeec09273c726",
+    "name": "mongodb-atlas",
+    "type": "mongodb-atlas",
+    "config": {
+        "clusterName": "KWH-DA-Demos",
+        "readPreference": "primary",
+        "wireProtocolEnabled": false
+    },
+    "version": 1
+}

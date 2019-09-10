@@ -1,0 +1,12 @@
+{
+    "app_id": "advancedftsdemo-wstfr",
+    "config_version": 20180301,
+    "name": "AdvancedFTSDemo",
+    "location": "US-VA",
+    "deployment_model": "GLOBAL",
+    "security": {},
+    "hosting": {
+        "enabled": true,
+        "app_default_domain": "advancedftsdemo-wstfr.mongodbstitch.com"
+    }
+}
