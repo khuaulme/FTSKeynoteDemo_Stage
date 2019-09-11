@@ -1,7 +1,3 @@
-
-
-
-
 const titles = [
     "The Land Beyond the Sunset",
     "Regeneration",

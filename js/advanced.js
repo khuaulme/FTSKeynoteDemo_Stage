@@ -1,8 +1,8 @@
 // Get movie titles from STITCH DATA API
 const getTitles = async () => {
     // CALLING get-movies-titles SERVICE  -- to be used for autocomplete
-    const res = await fetch('https://webhooks.mongodb-stitch.com/api/client/v2.0/app/fts-advanced-gpwko/service/getTitles/incoming_webhook/getTitles');
-    const titles = await res.json();
+    //const res = await fetch('https://webhooks.mongodb-stitch.com/api/client/v2.0/app/fts-advanced-gpwko/service/getTitles/incoming_webhook/getTitles');
+   //const titles = await res.json();
     console.log("Number of titles: " + titles.length);
 
     autocomplete(document.getElementById("myInput"), titles);
@@ -24,12 +24,12 @@ const userActionAll = async () =>
 
     if (ac_selected) {
         // CALLING movies-titles-FTS SERVICE
-        webhook_url="https://webhooks.mongodb-stitch.com/api/client/v2.0/app/fts-advanced-gpwko/service/movies-titles-FTS/incoming_webhook/movies-titles-FTS";
-        //webhook_url = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/afts-shadow-myirl/service/movies-titles-FTS/incoming_webhook/movies-titles-FTS";
+
+        webhook_url = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/advancedftsdemo-wstfr/service/movies-titles-FTS/incoming_webhook/movies-titles-FTS";
     } else {
         // CALLING movies_fuzzy_FTS SERVICE
-        webhook_url= "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/fts-advanced-gpwko/service/movies-fuzzy-FTS/incoming_webhook/movies-fuzzy-FTS";
-        // webhook_url = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/afts-shadow-myirl/service/movies_fuzzy_FTS/incoming_webhook/movies-fuzzy-FTS";
+       
+         webhook_url = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/advancedftsdemo-wstfr/service/movies-fuzzy-FTS/incoming_webhook/movies-fuzzy-FTS";
     }
     let url = webhook_url + "?arg=" + searchString;
 
