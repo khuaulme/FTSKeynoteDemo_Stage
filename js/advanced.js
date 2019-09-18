@@ -1,17 +1,19 @@
 // Get movie titles from STITCH DATA API
-const getTitles = async () => {
+//const getTitles = async () => {
     // CALLING get-movies-titles SERVICE  -- to be used for autocomplete
     //const res = await fetch('https://webhooks.mongodb-stitch.com/api/client/v2.0/app/fts-advanced-gpwko/service/getTitles/incoming_webhook/getTitles');
    //const titles = await res.json();
-    console.log("Number of titles: " + titles.length);
+//    console.log("Number of titles: " + titles.length);
 
-    autocomplete(document.getElementById("myInput"), titles);
+//    autocomplete(document.getElementById("myInput"), titles);
 
-};
+//};
 
 //autocomplete set to false by default.
 //If user selects a typed-ahead title, ac_selected flag set to true in autocomplete.js line 36
 let ac_selected = false;
+// ADDED 9/18 ---------------------
+autocomplete(document.getElementById("myInput"), titles);
 
 const userActionAll = async () =>
 {
@@ -24,11 +26,9 @@ const userActionAll = async () =>
 
     if (ac_selected) {
         // CALLING movies-titles-FTS SERVICE
-
         webhook_url = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/advancedftsdemo-wstfr/service/movies-titles-FTS/incoming_webhook/movies-titles-FTS";
     } else {
         // CALLING movies_fuzzy_FTS SERVICE
-       
          webhook_url = "https://webhooks.mongodb-stitch.com/api/client/v2.0/app/advancedftsdemo-wstfr/service/movies-fuzzy-FTS/incoming_webhook/movies-fuzzy-FTS";
     }
     let url = webhook_url + "?arg=" + searchString;
@@ -184,7 +184,7 @@ function buildTextPlot (moviePlot){
 }
 
 
-window.addEventListener('DOMContentLoaded', getTitles);
+//window.addEventListener('DOMContentLoaded', getTitles);
 
 
 
